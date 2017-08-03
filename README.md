@@ -1,2 +1,2 @@
-# py-kNN
-A python k-NN classifier
+# py-kMeans
+A python k-means classifier
