@@ -18,7 +18,7 @@ class KMeansCluster:
 
 
     def isNot(self, otherCluster):
-        retValue = False
+        retValue = True
         if (self.getPosition() == otherCluster.getPosition()).all():
-            retValue = True
+            retValue = False
         return retValue

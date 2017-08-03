@@ -24,6 +24,7 @@ class KMeansClassifier:
                 for point in clusterPoints:
                     closerCluster = self.getCloserCluster(self, point)
                     if cluster.isNot(closerCluster):
+                        
 
 
     def createInitClusters(self, numClusters, dataset):
