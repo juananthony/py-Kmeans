@@ -24,7 +24,8 @@ class KMeansClassifier:
                 for point in clusterPoints:
                     closerCluster = self.getCloserCluster(self, point)
                     if cluster.isNot(closerCluster):
-                        
+                        closerCluster.addPoint(point)
+                        cluster.removePoint(point)
 
 
     def createInitClusters(self, numClusters, dataset):
@@ -53,4 +54,4 @@ class KMeansClassifier:
         return closer
 
     def getDistance(self, point, cluster):
-        return sqrt(sum(power(point - cluster.getPosition(), 2)))
+        return sqrt(sum(power(point.getPosition - cluster.getPosition(), 2)))
