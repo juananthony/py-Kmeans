@@ -1,4 +1,0 @@
-class knnGroup:
-    values = []
-
-    

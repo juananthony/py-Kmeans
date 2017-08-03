@@ -1,6 +1,6 @@
 
-class KnnClassifier:
-    groups = []
+class KMeansClassifier:
+    classes = []
 
     def addGroup(self, group):
         self.groups.append(group)
@@ -8,4 +8,5 @@ class KnnClassifier:
     def getGroups(self):
         return self.groups
 
-    def 
+    def test(self, numClasses, dataset):
+        
