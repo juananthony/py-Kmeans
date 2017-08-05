@@ -26,17 +26,13 @@ class KMeansCluster:
             dimIndex = 0
             for dim in point.getPosition():
                 if dimIndex == len(dimentions):
-                    print("- append (dimIndex: " + str(dimIndex) + " |  len(dimentions): " + str(len(dimentions)) + ")")
                     dimentions.append(dim)
                 else:
-                    print("- sum (dimIndex: " + str(dimIndex) + " |  len(dimentions): " + str(len(dimentions)) + ")")
                     dimentions[dimIndex] += dim
                 dimIndex += 1
         newPosition=[]
         for dim in dimentions:
-            print("Cluster id " + str(self.getId()) + " dimention: " + str(dim) + " | points: " + str(len(self.points)))
             newPosition.append(dim / len(self.points))
-        print("old position: " + str(self.position) + "  |  new position: " + str(newPosition))
         if self.positionHasChange(newPosition):
             positionHasChange = True
         self.position = newPosition
@@ -67,7 +63,6 @@ class KMeansCluster:
         if actualNumDims == newNumDims:
             index = 0
             while index < actualNumDims:
-                print("old dim " + str(index) + ": " + str(self.position[index]) + "\t|  new dim " + str(index) + ": " + str(newPosition[index]))
                 if abs(self.position[index] - newPosition[index]) > 0.0000000001:
                     hasBeenChanged = True
                 index += 1

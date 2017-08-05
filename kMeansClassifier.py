@@ -19,7 +19,6 @@ class KMeansClassifier:
     def train(self, numClusters, dataset):
         # create the cluster objects
         self.createInitClusters(numClusters, dataset)
-        self.getClustersInfo()
         # training
         anyClusterHasMoved = True
         index = 1
@@ -39,16 +38,14 @@ class KMeansClassifier:
                 aux = cluster.setPosition()
                 anyClusterHasMoved = anyClusterHasMoved or aux
             index += 1
-        print("Cluster classified in " + str(index) + " iterations.")
 
     def classify(self, position):
-        #print("KMeansClassifier  ---  classify()")
         point = KMeansPoint(position, 1)
         return self.getCloserCluster(point)
 
     def createInitClusters(self, numClusters, dataset):
         # get all the N random clusters
-        randomClusters = random.sample(xrange(0,len(dataset)), numClusters)
+        randomClusters = random.sample(range(0,len(dataset)), numClusters)
 
         for example in randomClusters:
             randomCluster = KMeansCluster(dataset[example], example)
@@ -80,8 +77,7 @@ class KMeansClassifier:
 
     def getClustersInfo(self):
         print("\n|------- CLUSTER INFO -------|")
-        print("Number of clusters: " + str(len(self.clusters)))
-        print("Cluster positions")
+        print("Number of clusters: " + str(len(self.clusters)) + "\nCluster positions")
         index = 0
         while index < len(self.clusters):
             print("\n+ Cluster[" + str(index) + "] with id: " + str(self.clusters[index].clusterId))
