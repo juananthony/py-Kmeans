@@ -2,7 +2,7 @@ class KMeansPoint:
     position = []
     pointId = -1
 
-    def init(self, position, pointId):
+    def __init__(self, position, pointId):
         #print("KMeansPoint  ---  init()  ---  id: " + str(pointId) + " | position len: " + str(len(position)))
         #print(position)
         self.position = position
