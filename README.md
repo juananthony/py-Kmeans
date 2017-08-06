@@ -81,7 +81,8 @@ plt.plot(*sum(clusters, []), marker='^', color='g')
 plt.show()
 ```
 
-### Example2
+### Example 2
+This examples is similar to the previous one. But, this uses a new dimention in the observations. With a given 11 observations in 3 dimentions, that creates 2 clusters and show them in a plot.
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D
