@@ -43,7 +43,7 @@ class PyKMeans:
                 anyClusterHasMoved = anyClusterHasMoved or aux
             index += 1
 
-    def classify(self, position):
+    def getClusterOf(self, position):
         point = PyKMeansPoint(position, 1)
         return self.getCloserCluster(point)
 
