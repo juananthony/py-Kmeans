@@ -11,13 +11,14 @@ points = [[1,1], [1.2,1.0], [1.3, 1.1], [1.8, 0.7], [1.1, 0.7], [0.8, 0.7], [3,3
 main.train(4, points)
 
 # return the cluster that the point [1.1, 1.1] belongs to
-cluster = main.getClusterOf([1.1,1.1])
+otherObservation = [1.1, 1.1]
+cluster = main.getClusterOf(otherObservation)
 
 # returns a info of the clusters like position and points of them
 main.getClustersInfo()
 
 # prints the point and his cluster
-print("Point " + str(pointToClassify) + " belongs to cluster: " + str(cluster.getPosition()))
+print("Point " + str(otherObservation) + " belongs to cluster: " + str(cluster.getPosition()))
 
 # returns the clusters position
 clusters = main.getClustersPositions()

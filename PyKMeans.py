@@ -1,4 +1,6 @@
 """
+Created by juananthony.
+
 Main class from module. PyKMeans creates a K number of clusters
 by a given N number of points (or observations).
 """
