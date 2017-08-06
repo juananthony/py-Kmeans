@@ -1,3 +1,7 @@
+"""
+Main class from module. PyKMeans creates a K number of clusters
+by a given N number of points (or observations).
+"""
 from PyKMeansCluster import PyKMeansCluster
 from PyKMeansPoint import PyKMeansPoint
 from numpy import *
