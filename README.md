@@ -10,7 +10,8 @@ Copy the files
 
 ## Examples
 ### Example 1
-{{{import matplotlib.pyplot as plt
+```python
+import matplotlib.pyplot as plt
 from PyKMeans import PyKMeans
 
 # create the K-means classifier
@@ -32,4 +33,4 @@ clusters = main.getClustersPositions()
 plt.plot(*sum(points, []), marker='o', color='r')
 plt.plot(*sum(clusters, []), marker='^', color='g')
 plt.show()
-}}}
+```
