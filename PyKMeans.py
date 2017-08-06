@@ -1,9 +1,9 @@
-from KMeansCluster import KMeansCluster
-from KMeansPoint import KMeansPoint
+from PyKMeansCluster import PyKMeansCluster
+from PyKMeansPoint import PyKMeansPoint
 from numpy import *
 import random
 
-class KMeansClassifier:
+class PyKMeans:
     clusters = []
 
     def __init__(self):
@@ -40,7 +40,7 @@ class KMeansClassifier:
             index += 1
 
     def classify(self, position):
-        point = KMeansPoint(position, 1)
+        point = PyKMeansPoint(position, 1)
         return self.getCloserCluster(point)
 
     def createInitClusters(self, numClusters, dataset):
@@ -48,13 +48,13 @@ class KMeansClassifier:
         randomClusters = random.sample(range(0,len(dataset)), numClusters)
 
         for example in randomClusters:
-            randomCluster = KMeansCluster(dataset[example], example)
+            randomCluster = PyKMeansCluster(dataset[example], example)
             self.clusters.append(randomCluster)
 
 
         index = 0
         for entry in dataset:
-            point = KMeansPoint(entry, index)
+            point = PyKMeansPoint(entry, index)
             index += 1
             cluster = self.getCloserCluster(point)
             cluster.addPoint(point)

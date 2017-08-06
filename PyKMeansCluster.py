@@ -1,6 +1,6 @@
-from KMeansPoint import KMeansPoint
+from PyKMeansPoint import PyKMeansPoint
 
-class KMeansCluster:
+class PyKMeansCluster:
     position = []
     points = []
     clusterId = -1
@@ -54,7 +54,7 @@ class KMeansCluster:
                 self.points.remove(point)
                 founded = True
         if founded is False:
-            print(" !!!!!!!!!!!!!!!!!!!!  N O T   F O U N D !!!!!!!!!!!!!!!!!")
+            raise Exception("Couldn't found given point to remove from Cluster.")
 
     def positionHasChange(self, newPosition):
         hasBeenChanged = False
