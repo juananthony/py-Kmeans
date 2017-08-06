@@ -1,6 +1,8 @@
 # py-kMeans
 PyKMeans creates a K number of clusters by a given N number of points (or observations).
 
+It uses K-means clustering (https://en.wikipedia.org/wiki/K-means_clustering)
+
 ## Components
 PyKMeans has 3 different classes
 
